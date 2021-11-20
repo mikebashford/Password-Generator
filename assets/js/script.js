@@ -25,6 +25,7 @@ function writePassword()
 //Asks for user input and returns the password generated
 function generatePassword()
 {
+  tempPass = "";
   generateBtn.disabled = true;
   getPasswordLength();
   getPasswordTypes();
@@ -73,7 +74,10 @@ function getPasswordTypes()
     //Verify at least 1 type was selected
     if(verifyOneSelected >= 1)
     {
-
+      console.log(hasLower);
+      console.log(hasUpper);
+      console.log(hasSymbol);
+      console.log(hasNumber);
       //Checks if the hasLower option was selected and appends it to the tempPass if true
       if(hasLower)
       {
