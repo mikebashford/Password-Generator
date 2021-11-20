@@ -18,11 +18,14 @@ function writePassword()
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+
+  return generateBtn.disabled = false;
 }
 
 //Asks for user input and returns the password generated
 function generatePassword()
 {
+  generateBtn.disabled = true;
   getPasswordLength();
   getPasswordTypes();
   //Empty variable that will hold our randomly generated password
